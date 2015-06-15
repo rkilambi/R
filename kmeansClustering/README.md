@@ -1,5 +1,19 @@
 #R/kmeans Clustering algoithm/README.md
 
+commands to usage:
+randomData<-gendata(10000,30,1000)
+clusteredResult<-myKmeans(randomData1$all_points,randomData$centers,150)
+
+viewing results:
+clusteredResult$new_centers
+clusteredResult$labels
+
+for timing the result use:
+p<-proc.time()
+randomData<-gendata(10000,30,1000)
+clusteredResult<-myKmeans(randomData1$all_points,randomData$centers,150)
+print(proc.time()-p)
+
 This project is an implementation of the kmeans clustering algorithm using matrix multiplication for efficient use
 
 The algorithm contains three methods:
@@ -34,4 +48,4 @@ new_centers-a D by K matrix obtained by averagint the point in the label
 It takes all_points, centers and niter as its arguments
 niter - specifies the number of possible iterations to be run on the points
 
-returns a list of the newcenters and labels
+returns a list of the new_centers and labels
